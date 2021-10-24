@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 plt.rcParams['figure.dpi'] = 300
 
-df_input=pd.read_csv('2281305.csv',low_memory=False)
+df_input=pd.read_csv('data/2281305.csv',low_memory=False)
 df_windspeed=pd.DataFrame(np.full((len(df_input),1),np.nan),index=df_input['DATE'],columns=['speed rate'])
 for i in range(len(df_windspeed)):
     df_windspeed.iloc[i,0]=int(df_input['WND'][i][8:12])
