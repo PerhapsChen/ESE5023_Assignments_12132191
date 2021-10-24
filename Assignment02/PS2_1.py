@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 plt.rcParams['figure.dpi'] = 300
 
-Sig_Eqs = pd.read_csv('earthquakes-2021-10-23_17-00-59_+0800.tsv',sep='\t').iloc[1:,1:]
+Sig_Eqs = pd.read_csv('data/earthquakes-2021-10-23_17-00-59_+0800.tsv',sep='\t').iloc[1:,1:]
 df_eq = Sig_Eqs.set_index('Country')
 df_top10_deaths=df_eq['Total Deaths'].groupby('Country').sum().sort_values(ascending=False).head(10)
 
