@@ -5,7 +5,7 @@ import statsmodels.formula.api as smf
 from scipy.stats.mstats import theilslopes
 from scipy.stats import kendalltau
 
-df_3sites=pd.read_csv('data_3stations.csv')
+df_3sites=pd.read_csv('data/data_3stations.csv')
 df_3sites=df_3sites.set_index('time')
 df_3sites.index=pd.to_datetime(df_3sites.index)
 
